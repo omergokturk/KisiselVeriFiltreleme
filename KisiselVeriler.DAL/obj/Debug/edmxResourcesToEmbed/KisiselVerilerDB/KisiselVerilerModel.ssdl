@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KisiselVerilerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AileBilgileri">
+    <Key>
+      <PropertyRef Name="AileBilgileriID" />
+    </Key>
+    <Property Name="AileBilgileriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiID" Type="int" Nullable="false" />
+    <Property Name="AnneAdi" Type="varchar" MaxLength="20" />
+    <Property Name="BabaAdi" Type="varchar" MaxLength="20" />
+    <Property Name="KardesSayisi" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="EgitimBilgileri">
+    <Key>
+      <PropertyRef Name="KisiID" />
+    </Key>
+    <Property Name="KisiID" Type="int" Nullable="false" />
+    <Property Name="Ilkokul" Type="varchar" MaxLength="30" />
+    <Property Name="Ortaokul" Type="varchar" MaxLength="30" />
+    <Property Name="Lise" Type="varchar" MaxLength="30" />
+    <Property Name="Universite" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Hobiler">
+    <Key>
+      <PropertyRef Name="HobiID" />
+    </Key>
+    <Property Name="HobiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HobiAdi" Type="varchar" MaxLength="20" />
+    <Property Name="HobiUstKategoriID" Type="int" />
+  </EntityType>
+  <EntityType Name="IletisimBilgileri">
+    <Key>
+      <PropertyRef Name="IletisimBilgileriID" />
+    </Key>
+    <Property Name="IletisimBilgileriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiID" Type="int" Nullable="false" />
+    <Property Name="Adres" Type="varchar" MaxLength="50" />
+    <Property Name="Telefon" Type="varchar" MaxLength="15" />
+    <Property Name="Mail" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="KisiHobileri">
+    <Key>
+      <PropertyRef Name="KisiHobileriID" />
+    </Key>
+    <Property Name="KisiHobileriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiID" Type="int" Nullable="false" />
+    <Property Name="HobiID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KisiselBilgiler">
+    <Key>
+      <PropertyRef Name="KisiID" />
+    </Key>
+    <Property Name="KisiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiAdi" Type="varchar" MaxLength="30" />
+    <Property Name="KisiSoyadi" Type="varchar" MaxLength="30" />
+    <Property Name="KisiTCNo" Type="varchar" MaxLength="11" />
+    <Property Name="KisiDogumTarihi" Type="datetime" Nullable="false" />
+    <Property Name="KisiDogumYeri" Type="varchar" MaxLength="30" />
+    <Property Name="KisiUyruk" Type="varchar" MaxLength="20" />
+    <Property Name="KisiAylikGelir" Type="decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <Association Name="FK_AileBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="AileBilgileri" Type="Self.AileBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="AileBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EgitimBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="EgitimBilgileri" Type="Self.EgitimBilgileri" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="EgitimBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IletisimBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="IletisimBilgileri" Type="Self.IletisimBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="IletisimBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KisiIlgiAlanlari_İlgiAlanlari">
+    <End Role="Hobiler" Type="Self.Hobiler" Multiplicity="1" />
+    <End Role="KisiHobileri" Type="Self.KisiHobileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobiler">
+        <PropertyRef Name="HobiID" />
+      </Principal>
+      <Dependent Role="KisiHobileri">
+        <PropertyRef Name="HobiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KisiIlgiAlanlari_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="KisiHobileri" Type="Self.KisiHobileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="KisiHobileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KisiselVerilerDBModelStoreContainer">
+    <EntitySet Name="AileBilgileri" EntityType="Self.AileBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EgitimBilgileri" EntityType="Self.EgitimBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobiler" EntityType="Self.Hobiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IletisimBilgileri" EntityType="Self.IletisimBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KisiHobileri" EntityType="Self.KisiHobileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KisiselBilgiler" EntityType="Self.KisiselBilgiler" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AileBilgileri_KisiselBilgiler" Association="Self.FK_AileBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="AileBilgileri" EntitySet="AileBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EgitimBilgileri_KisiselBilgiler" Association="Self.FK_EgitimBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="EgitimBilgileri" EntitySet="EgitimBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IletisimBilgileri_KisiselBilgiler" Association="Self.FK_IletisimBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="IletisimBilgileri" EntitySet="IletisimBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KisiIlgiAlanlari_İlgiAlanlari" Association="Self.FK_KisiIlgiAlanlari_İlgiAlanlari">
+      <End Role="Hobiler" EntitySet="Hobiler" />
+      <End Role="KisiHobileri" EntitySet="KisiHobileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KisiIlgiAlanlari_KisiselBilgiler" Association="Self.FK_KisiIlgiAlanlari_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="KisiHobileri" EntitySet="KisiHobileri" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

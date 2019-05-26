@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KisiselVerilerDBModelStoreContainer" CdmEntityContainer="KisiselVerilerDBContext">
+    <EntitySetMapping Name="AileBilgileri">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.AileBilgileri">
+        <MappingFragment StoreEntitySet="AileBilgileri">
+          <ScalarProperty Name="AileBilgileriID" ColumnName="AileBilgileriID" />
+          <ScalarProperty Name="KisiID" ColumnName="KisiID" />
+          <ScalarProperty Name="AnneAdi" ColumnName="AnneAdi" />
+          <ScalarProperty Name="BabaAdi" ColumnName="BabaAdi" />
+          <ScalarProperty Name="KardesSayisi" ColumnName="KardesSayisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EgitimBilgileri">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.EgitimBilgileri">
+        <MappingFragment StoreEntitySet="EgitimBilgileri">
+          <ScalarProperty Name="KisiID" ColumnName="KisiID" />
+          <ScalarProperty Name="Ilkokul" ColumnName="Ilkokul" />
+          <ScalarProperty Name="Ortaokul" ColumnName="Ortaokul" />
+          <ScalarProperty Name="Lise" ColumnName="Lise" />
+          <ScalarProperty Name="Universite" ColumnName="Universite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobiler">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.Hobiler">
+        <MappingFragment StoreEntitySet="Hobiler">
+          <ScalarProperty Name="HobiID" ColumnName="HobiID" />
+          <ScalarProperty Name="HobiAdi" ColumnName="HobiAdi" />
+          <ScalarProperty Name="HobiUstKategoriID" ColumnName="HobiUstKategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IletisimBilgileri">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.IletisimBilgileri">
+        <MappingFragment StoreEntitySet="IletisimBilgileri">
+          <ScalarProperty Name="IletisimBilgileriID" ColumnName="IletisimBilgileriID" />
+          <ScalarProperty Name="KisiID" ColumnName="KisiID" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KisiHobileri">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.KisiHobileri">
+        <MappingFragment StoreEntitySet="KisiHobileri">
+          <ScalarProperty Name="KisiHobileriID" ColumnName="KisiHobileriID" />
+          <ScalarProperty Name="KisiID" ColumnName="KisiID" />
+          <ScalarProperty Name="HobiID" ColumnName="HobiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KisiselBilgiler">
+      <EntityTypeMapping TypeName="KisiselVerilerDBModel.KisiselBilgiler">
+        <MappingFragment StoreEntitySet="KisiselBilgiler">
+          <ScalarProperty Name="KisiID" ColumnName="KisiID" />
+          <ScalarProperty Name="KisiAdi" ColumnName="KisiAdi" />
+          <ScalarProperty Name="KisiSoyadi" ColumnName="KisiSoyadi" />
+          <ScalarProperty Name="KisiTCNo" ColumnName="KisiTCNo" />
+          <ScalarProperty Name="KisiDogumTarihi" ColumnName="KisiDogumTarihi" />
+          <ScalarProperty Name="KisiDogumYeri" ColumnName="KisiDogumYeri" />
+          <ScalarProperty Name="KisiUyruk" ColumnName="KisiUyruk" />
+          <ScalarProperty Name="KisiAylikGelir" ColumnName="KisiAylikGelir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

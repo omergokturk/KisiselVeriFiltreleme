@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KisiselVerilerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AileBilgileri">
+    <Key>
+      <PropertyRef Name="AileBilgileriID" />
+    </Key>
+    <Property Name="AileBilgileriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiID" Type="Int32" Nullable="false" />
+    <Property Name="AnneAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BabaAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KardesSayisi" Type="Byte" />
+    <NavigationProperty Name="KisiselBilgiler" Relationship="Self.FK_AileBilgileri_KisiselBilgiler" FromRole="AileBilgileri" ToRole="KisiselBilgiler" />
+  </EntityType>
+  <EntityType Name="Hobiler">
+    <Key>
+      <PropertyRef Name="HobiID" />
+    </Key>
+    <Property Name="HobiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HobiAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HobiUstKategoriID" Type="Int32" />
+    <NavigationProperty Name="KisiHobileri" Relationship="Self.FK_KisiIlgiAlanlari_İlgiAlanlari" FromRole="Hobiler" ToRole="KisiHobileri" />
+  </EntityType>
+  <EntityType Name="IletisimBilgileri">
+    <Key>
+      <PropertyRef Name="IletisimBilgileriID" />
+    </Key>
+    <Property Name="IletisimBilgileriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiID" Type="Int32" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KisiselBilgiler" Relationship="Self.FK_IletisimBilgileri_KisiselBilgiler" FromRole="IletisimBilgileri" ToRole="KisiselBilgiler" />
+  </EntityType>
+  <EntityType Name="KisiHobileri">
+    <Key>
+      <PropertyRef Name="KisiHobileriID" />
+    </Key>
+    <Property Name="KisiHobileriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiID" Type="Int32" Nullable="false" />
+    <Property Name="HobiID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Hobiler" Relationship="Self.FK_KisiIlgiAlanlari_İlgiAlanlari" FromRole="KisiHobileri" ToRole="Hobiler" />
+    <NavigationProperty Name="KisiselBilgiler" Relationship="Self.FK_KisiIlgiAlanlari_KisiselBilgiler" FromRole="KisiHobileri" ToRole="KisiselBilgiler" />
+  </EntityType>
+  <EntityType Name="KisiselBilgiler">
+    <Key>
+      <PropertyRef Name="KisiID" />
+    </Key>
+    <Property Name="KisiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="KisiSoyadi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="KisiTCNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="KisiDogumTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="KisiDogumYeri" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="KisiUyruk" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KisiAylikGelir" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="AileBilgileri" Relationship="Self.FK_AileBilgileri_KisiselBilgiler" FromRole="KisiselBilgiler" ToRole="AileBilgileri" />
+    <NavigationProperty Name="IletisimBilgileri" Relationship="Self.FK_IletisimBilgileri_KisiselBilgiler" FromRole="KisiselBilgiler" ToRole="IletisimBilgileri" />
+    <NavigationProperty Name="KisiHobileri" Relationship="Self.FK_KisiIlgiAlanlari_KisiselBilgiler" FromRole="KisiselBilgiler" ToRole="KisiHobileri" />
+    <NavigationProperty Name="EgitimBilgileri" Relationship="Self.FK_EgitimBilgileri_KisiselBilgiler" FromRole="KisiselBilgiler" ToRole="EgitimBilgileri" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EgitimBilgileri">
+    <Key>
+      <PropertyRef Name="KisiID" />
+    </Key>
+    <Property Name="KisiID" Type="Int32" Nullable="false" />
+    <Property Name="Ilkokul" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Ortaokul" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Lise" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Universite" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KisiselBilgiler" Relationship="Self.FK_EgitimBilgileri_KisiselBilgiler" FromRole="EgitimBilgileri" ToRole="KisiselBilgiler" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_AileBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="AileBilgileri" Type="Self.AileBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="AileBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KisiIlgiAlanlari_İlgiAlanlari">
+    <End Role="Hobiler" Type="Self.Hobiler" Multiplicity="1" />
+    <End Role="KisiHobileri" Type="Self.KisiHobileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobiler">
+        <PropertyRef Name="HobiID" />
+      </Principal>
+      <Dependent Role="KisiHobileri">
+        <PropertyRef Name="HobiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IletisimBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="IletisimBilgileri" Type="Self.IletisimBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="IletisimBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KisiIlgiAlanlari_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="KisiHobileri" Type="Self.KisiHobileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="KisiHobileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EgitimBilgileri_KisiselBilgiler">
+    <End Role="KisiselBilgiler" Type="Self.KisiselBilgiler" Multiplicity="1" />
+    <End Role="EgitimBilgileri" Type="Self.EgitimBilgileri" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KisiselBilgiler">
+        <PropertyRef Name="KisiID" />
+      </Principal>
+      <Dependent Role="EgitimBilgileri">
+        <PropertyRef Name="KisiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KisiselVerilerDBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AileBilgileri" EntityType="Self.AileBilgileri" />
+    <EntitySet Name="Hobiler" EntityType="Self.Hobiler" />
+    <EntitySet Name="IletisimBilgileri" EntityType="Self.IletisimBilgileri" />
+    <EntitySet Name="KisiHobileri" EntityType="Self.KisiHobileri" />
+    <EntitySet Name="KisiselBilgiler" EntityType="Self.KisiselBilgiler" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="EgitimBilgileri" EntityType="Self.EgitimBilgileri" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <AssociationSet Name="FK_AileBilgileri_KisiselBilgiler" Association="Self.FK_AileBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="AileBilgileri" EntitySet="AileBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KisiIlgiAlanlari_İlgiAlanlari" Association="Self.FK_KisiIlgiAlanlari_İlgiAlanlari">
+      <End Role="Hobiler" EntitySet="Hobiler" />
+      <End Role="KisiHobileri" EntitySet="KisiHobileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IletisimBilgileri_KisiselBilgiler" Association="Self.FK_IletisimBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="IletisimBilgileri" EntitySet="IletisimBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KisiIlgiAlanlari_KisiselBilgiler" Association="Self.FK_KisiIlgiAlanlari_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="KisiHobileri" EntitySet="KisiHobileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EgitimBilgileri_KisiselBilgiler" Association="Self.FK_EgitimBilgileri_KisiselBilgiler">
+      <End Role="KisiselBilgiler" EntitySet="KisiselBilgiler" />
+      <End Role="EgitimBilgileri" EntitySet="EgitimBilgileri" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(KisiselVerilerDBModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(KisiselVerilerDBModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

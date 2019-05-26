@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA52A4BB-BFE7-41E9-B089-0096FB200512}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KisiselVeriler.DAL</RootNamespace>
+    <AssemblyName>KisiselVeriler.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AileManagement.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="HobilerManagement.cs" />
+    <Compile Include="IletisimManagement.cs" />
+    <Compile Include="IRepositories.cs" />
+    <Compile Include="KisiHobileriManagement.cs" />
+    <Compile Include="KisiManagement.cs" />
+    <Compile Include="KisiselVerilerDB\AileBilgileri.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\EgitimBilgileri.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\Hobiler.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\IletisimBilgileri.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\KisiHobileri.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\KisiselBilgiler.cs">
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KisiselVerilerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="KisiselVerilerDB\KisiselVerilerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KisiselVerilerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KisiselVerilerDB\KisiselVerilerModel.edmx.diagram">
+      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KisiselVeriler.DTO\KisiselVeriler.DTO.csproj">
+      <Project>{9114c6ca-00e4-4ae7-83ad-612c43cccb7c}</Project>
+      <Name>KisiselVeriler.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KisiselVerilerDB\KisiselVerilerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+      <LastGenOutput>KisiselVerilerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KisiselVerilerDB\KisiselVerilerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+      <LastGenOutput>KisiselVerilerModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
