@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselVerilerUI", "KisiselVerilerUI\KisiselVerilerUI.csproj", "{2C2922A7-AB41-4ECC-AD79-E5A059CBBE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselVeriler.DAL", "KisiselVeriler.DAL\KisiselVeriler.DAL.csproj", "{DA52A4BB-BFE7-41E9-B089-0096FB200512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselVeriler.BLL", "KisiselVeriler.BLL\KisiselVeriler.BLL.csproj", "{3504BB66-F6EE-4005-BB03-849C7656261A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselVeriler.DTO", "KisiselVeriler.DTO\KisiselVeriler.DTO.csproj", "{9114C6CA-00E4-4AE7-83AD-612C43CCCB7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C2922A7-AB41-4ECC-AD79-E5A059CBBE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2922A7-AB41-4ECC-AD79-E5A059CBBE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2922A7-AB41-4ECC-AD79-E5A059CBBE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2922A7-AB41-4ECC-AD79-E5A059CBBE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA52A4BB-BFE7-41E9-B089-0096FB200512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA52A4BB-BFE7-41E9-B089-0096FB200512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA52A4BB-BFE7-41E9-B089-0096FB200512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA52A4BB-BFE7-41E9-B089-0096FB200512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3504BB66-F6EE-4005-BB03-849C7656261A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3504BB66-F6EE-4005-BB03-849C7656261A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3504BB66-F6EE-4005-BB03-849C7656261A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3504BB66-F6EE-4005-BB03-849C7656261A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9114C6CA-00E4-4AE7-83AD-612C43CCCB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9114C6CA-00E4-4AE7-83AD-612C43CCCB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9114C6CA-00E4-4AE7-83AD-612C43CCCB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9114C6CA-00E4-4AE7-83AD-612C43CCCB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AED4E5DC-E32F-4B0B-84AE-71C63D7ACCC8}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/mercury2019
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = KisiselVerilerUI\\KisiselVerilerUI.csproj
+		SccProjectName1 = KisiselVerilerUI
+		SccLocalPath1 = KisiselVerilerUI
+		SccProjectUniqueName2 = KisiselVeriler.DAL\\KisiselVeriler.DAL.csproj
+		SccProjectName2 = KisiselVeriler.DAL
+		SccLocalPath2 = KisiselVeriler.DAL
+		SccProjectUniqueName3 = KisiselVeriler.BLL\\KisiselVeriler.BLL.csproj
+		SccProjectName3 = KisiselVeriler.BLL
+		SccLocalPath3 = KisiselVeriler.BLL
+		SccProjectUniqueName4 = KisiselVeriler.DTO\\KisiselVeriler.DTO.csproj
+		SccProjectName4 = KisiselVeriler.DTO
+		SccLocalPath4 = KisiselVeriler.DTO
+	EndGlobalSection
+EndGlobal
