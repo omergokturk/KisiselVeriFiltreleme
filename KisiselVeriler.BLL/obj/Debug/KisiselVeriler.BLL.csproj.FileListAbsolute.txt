@@ -1,0 +1,17 @@
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\obj\Debug\KisiselVeriler.BLL.csprojAssemblyReference.cache
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\obj\Debug\KisiselVeriler.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.BLL.dll.config
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.BLL.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.BLL.pdb
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.DAL.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.DTO.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.DAL.pdb
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.DAL.dll.config
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\KisiselVeriler.DTO.pdb
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\obj\Debug\KisiselVeriler.BLL.csproj.CopyComplete
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\obj\Debug\KisiselVeriler.BLL.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.BLL\obj\Debug\KisiselVeriler.BLL.pdb
