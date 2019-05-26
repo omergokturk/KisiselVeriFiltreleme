@@ -1,0 +1,5 @@
+C:\Users\Ergin\Documents\cx\KisiselVeriler.DTO\bin\Debug\KisiselVeriler.DTO.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.DTO\bin\Debug\KisiselVeriler.DTO.pdb
+C:\Users\Ergin\Documents\cx\KisiselVeriler.DTO\obj\Debug\KisiselVeriler.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Ergin\Documents\cx\KisiselVeriler.DTO\obj\Debug\KisiselVeriler.DTO.dll
+C:\Users\Ergin\Documents\cx\KisiselVeriler.DTO\obj\Debug\KisiselVeriler.DTO.pdb
