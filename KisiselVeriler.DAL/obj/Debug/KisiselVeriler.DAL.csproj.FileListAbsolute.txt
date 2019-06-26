@@ -12,3 +12,17 @@ C:\Users\Ergin\Documents\cx\KisiselVeriler.DAL\bin\Debug\EntityFramework.SqlServ
 C:\Users\Ergin\Documents\cx\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.csproj.CopyComplete
 C:\Users\Ergin\Documents\cx\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.dll
 C:\Users\Ergin\Documents\cx\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.pdb
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.csprojResolveAssemblyReference.cache
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.csproj.CoreCompileInputs.cache
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.dll
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.pdb
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\KisiselVeriler.DAL.dll.config
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\KisiselVeriler.DAL.dll
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\KisiselVeriler.DAL.pdb
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\EntityFramework.dll
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\KisiselVeriler.DTO.dll
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\KisiselVeriler.DTO.pdb
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\EntityFramework.xml
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\omerg\GithubClone\Kisisel-Veri-Analizi\KisiselVeriler.DAL\obj\Debug\KisiselVeriler.DAL.csproj.CopyComplete

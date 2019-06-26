@@ -1,10 +1,8 @@
-# Kisisel-Veri-Analizi
+Toplanan kişisel verilerin ilgili filtrelere göre gruplanarak ilgili kişilerin listelenmesi. 
 
-Kisisel bilgiler ile hobilerin islenip, belirtilen hobilere göre listeleme ve mesaj gönderim işlemleri varsayımsal olarak gerçekleştirilmektedir.
+Kullanılan Teknolojiler : C#, Visual Studio, MSSQL Server , Entity Framework(DB First), N-Tier Architectur
 
-Script klasörünün içerisindeki scripti çalıştırarak DB'yi oluşturun.(KisiselVerilerDB' yi Sql Server'da oluşturun.)
 
-UI katmanındaki app.comfig dosyasına, DAL katmanında yer alan connection stringi ekleyin.
-
----
-
+Projeyi Çalıştırmak için Scripti acın Use KisiselVerilerDB kısmını Create Database Olarak değiştirip önce db yi oluşturun sonra 
+işlemi geri alıp scripti çalıştırın. Proje tarafında ise dal ve ui kısmındaki app configlerdeki connecting stringleri kendi ms 
+serverınıza göre ayarlyın. 

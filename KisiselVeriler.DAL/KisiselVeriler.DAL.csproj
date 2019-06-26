@@ -62,48 +62,54 @@
     <Compile Include="KisiHobileriManagement.cs" />
     <Compile Include="KisiManagement.cs" />
     <Compile Include="KisiselVerilerDB\AileBilgileri.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\database_firewall_rules.cs">
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="KisiselVerilerDB\EgitimBilgileri.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="KisiselVerilerDB\Hobiler.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="KisiselVerilerDB\IletisimBilgileri.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="KisiselVerilerDB\KisiHobileri.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="KisiselVerilerDB\KisiselBilgiler.cs">
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.Context.cs">
+    <Compile Include="KisiselVerilerDB\KisiselVerilerDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>KisiselVerilerModel.Context.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.cs">
+    <Compile Include="KisiselVerilerDB\KisiselVerilerDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>KisiselVerilerModel.tt</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="KisiselVerilerDB\KisiselVerilerModel.Designer.cs">
+    <Compile Include="KisiselVerilerDB\KisiselVerilerDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+      <DependentUpon>KisiselVerilerDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="KisiselVerilerDB\sysdiagrams.cs">
+      <DependentUpon>KisiselVerilerDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="KisiselVerilerDB\KisiselVerilerModel.edmx">
+    <EntityDeploy Include="KisiselVerilerDB\KisiselVerilerDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KisiselVerilerModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>KisiselVerilerDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="KisiselVerilerDB\KisiselVerilerModel.edmx.diagram">
-      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
+    <None Include="KisiselVerilerDB\KisiselVerilerDB.edmx.diagram">
+      <DependentUpon>KisiselVerilerDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -117,15 +123,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KisiselVerilerDB\KisiselVerilerModel.Context.tt">
+    <Content Include="KisiselVerilerDB\KisiselVerilerDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
-      <LastGenOutput>KisiselVerilerModel.Context.cs</LastGenOutput>
+      <DependentUpon>KisiselVerilerDB.edmx</DependentUpon>
+      <LastGenOutput>KisiselVerilerDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="KisiselVerilerDB\KisiselVerilerModel.tt">
+    <Content Include="KisiselVerilerDB\KisiselVerilerDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KisiselVerilerModel.edmx</DependentUpon>
-      <LastGenOutput>KisiselVerilerModel.cs</LastGenOutput>
+      <DependentUpon>KisiselVerilerDB.edmx</DependentUpon>
+      <LastGenOutput>KisiselVerilerDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

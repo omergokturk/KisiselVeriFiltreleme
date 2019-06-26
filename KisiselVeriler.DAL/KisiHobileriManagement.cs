@@ -9,7 +9,7 @@ namespace KisiselVeriler.DAL
 {
     public class KisiHobileriManagement
     {
-        KisiselVerilerDBContext _db;
+        KisiselVerilerDBContext1 _db;
         public KisiHobileriManagement()
         {
             _db = DBHelper.Context;

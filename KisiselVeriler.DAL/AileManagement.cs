@@ -10,7 +10,7 @@ namespace KisiselVeriler.DAL
 {
     public class AileManagement
     {
-        KisiselVerilerDBContext _db;
+        KisiselVerilerDBContext1 _db;
         public AileManagement()
         {
             _db = DBHelper.Context;

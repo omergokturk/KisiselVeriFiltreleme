@@ -10,7 +10,7 @@ namespace KisiselVeriler.DAL
 {
     public class HobilerManagement
     {
-        KisiselVerilerDBContext _db;
+        KisiselVerilerDBContext1 _db;
         public HobilerManagement()
         {
             // _db = new KisiselVerilerDBContext();

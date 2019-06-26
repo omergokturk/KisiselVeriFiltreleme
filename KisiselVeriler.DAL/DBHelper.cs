@@ -10,13 +10,13 @@ namespace KisiselVeriler.DAL
     class DBHelper
     {
         private DBHelper() { }
-        private static KisiselVerilerDBContext _dbContext;
-        public static KisiselVerilerDBContext Context {
+        private static KisiselVerilerDBContext1 _dbContext;
+        public static KisiselVerilerDBContext1 Context {
             get
             {
                 if (_dbContext == null)
                 {
-                    _dbContext = new KisiselVerilerDBContext();
+                    _dbContext = new KisiselVerilerDBContext1();
                 }
                 return _dbContext;
             }
